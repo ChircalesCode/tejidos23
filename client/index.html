@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Parcel Sandbox</title>
+    <meta charset="UTF-8" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.3.0/socket.io.js"></script>
+    <script src="../app.js"></script>
+    <link rel="style" type="text/css" href="src/styles.css"/>
+  </head>
+
+  <body>
+    <div class="frame">
+      <div class="corner_topleft"></div>
+      <div class="corner_topright"></div>
+      <div class="corner_bottomleft"></div>
+      <div class="corner_bottomright"></div>
+
+      <div class="camera">
+        <div class="map"></div>
+        <div class="dpad">
+        <div class="DemoDirectionUI flex-center">
+          <button class="dpad-left">
+            <img src="client/imgs/left.png" />
+          </button>
+          <button class="dpad-right">
+            <img src="client/imgs/right.png" />
+          </button>
+          <button class="dpad-up">
+            <img src="client/imgs/up.png" />
+          </button>
+          <button class="dpad-down">
+            <img src="client/imgs/down.png" />
+          </button>
+        </div>
+        </div>
+        <div class="apad" >
+        <div class="DemoDirectionUI flex-center">
+          <button class="apad-tree">
+            <img src="client/imgs/tree.png" />
+          </button>
+          <button class="apad-water">
+            <img src="client/imgs/water.png" />
+          </button>
+          <button class="apad-star">
+            <img src="client/imgs/star.png" />
+          </button>
+          <button class="apad-lighting">
+            <img src="client/imgs/lighting.png" />
+          </button>
+        </div>
+      </div>
+        <div class="panel-div">
+          <div class="player-list-box">
+            <div class="list-title">Jugadores</div>
+            <div id="player-list">
+                --
+            </div>
+          </div>
+          <div class="chat" id="chat">
+            <div id="chat-text">Chat</div>
+            <form id="chat-form">
+                <input id="chat-input" type="text"/>
+            </form>
+          </div>
+          <div class="extrabuttons">
+            <div id="timeStamp"> Tiempo: </div>
+            <button id="kms-button">K</button>
+            <button id="revive-button">R</button>
+          </div> 
+        </div>
+      </div>
+  </div>
+
+  <div class="signDiv">
+    <div class="loginTitulo">Ingreso</div>
+    <input id="signDiv-user" type="text" placeholder="Usuario"/>
+    <br />
+    <input id="signDiv-pass" type="password" placeholder="Contraseña"/>
+    <br />
+    <br />
+    <button class="button" id="signDiv-signIn">Ingresar</button>
+    <button class="button" id="signDiv-signUp">Registro</button>
+  </div>
+  <div class="menu-seleccion-personaje">
+    <div class="select-buttons">
+      <button id="char1" class="char-select-button" >
+      <img
+        src="/client/sprites/tyler1-select.png"
+        alt="char"
+      />
+      <br />Tisquesusa
+      </button>
+      <button id="char2" class="char-select-button" onclick="UpdateCharModel('taeyeon')">
+      <img
+        src="/client/sprites/taeyeon-select.png"
+        alt="char"
+      />
+      <br />Zazipa
+        </button>
+        <button id="char3" class="char-select-button" onclick="UpdateCharModel('orge')">
+        <img
+          src="/client/sprites/orge-select.png"
+          alt="char"
+        />
+        <br />Bochica
+        </button>
+      </div>
+    </div>
+
+      </div>
+    </div>
+  </body>
+</html>
